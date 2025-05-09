@@ -18,20 +18,16 @@ To handle intensive tasks like image processing, we offloaded blink and yawn det
 This system balances local device feedback with server-side intelligence, creating a responsive tool to help drivers assess their condition before it becomes dangerous, all sparked by one tired night on the road.
 
 <img width="392" alt="Image" src="https://github.com/user-attachments/assets/d7d7afc0-b58b-4ffe-89ff-bc853396bab3" />
-![Image](https://github.com/user-attachments/assets/d19617cb-059f-404d-b60d-db308a863a12)
 
 This schematic represents our initial hardware mockup, developed during the early planning phase of the project. At this stage, we designed around an ESP32-DEVKITC-32E and prioritized including a USB-C connector for modern power delivery and convenience. Power from the USB-C port was stepped down to 3.3V using an AMS1117 regulator to supply the microcontroller and all peripherals. Key components such as the MQ-3 alcohol sensor, OLED display, LED, and buzzer were mapped out and connected directly to available GPIO pins. This early layout gave us full control over pin assignments and served as a foundational reference for system integration.
 
-![Image](https://github.com/user-attachments/assets/fca01364-de5d-4350-bbe6-507926016b17)
 
-![Image](https://github.com/user-attachments/assets/2aff27a8-458d-4108-a202-02ca8477a037)
 
 This image shows our initial PCB layout in KiCad, where we encountered several critical design oversights. One major issue was the USB-C port footprint, which was placed away from the board edge—making it physically unusable for cable connection. At this stage, we were still relying on a Molex-style connection scheme for the camera and sensors, which added wiring complexity. We used part libraries and footprint imports from Digi-Key to populate our schematic and layout quickly, but overlooked mechanical placement and enclosure fit. Despite its flaws, this version helped us become more familiar with PCB workflow and informed our corrected final revision.
 
 
 During development, we realized the original camera configuration using Molex-style I2C connectors was not reliable or practical for repeated prototyping. This led us to explore alternative connection methods, ultimately choosing a camera strip connector similar to those used in commercial ESP32-CAM modules. The transition required sourcing a compatible connector and verifying pin alignment and signal integrity. This change greatly improved physical stability and reduced the chance of misalignment or connection failure. It also simplified integration with our PCB and reduced debugging time during testing.
 
-![Image](https://github.com/user-attachments/assets/eb088de2-1628-433e-8c9b-e123718c0ef0)
 
 
 
@@ -43,7 +39,6 @@ We successfully got the MQ3 alcohol sensor working with the ESP32-DevKitC on a b
 
 
 
-![Image](https://github.com/user-attachments/assets/e12ff9b6-defb-4be0-b0ec-d7db6e9c0125)
 
 
 
@@ -51,7 +46,6 @@ This OV2640 camera module was ultimately unusable in our system due to missing d
 
 
 
-![Image](https://github.com/user-attachments/assets/5f131058-ee52-4e74-a20d-1d6385b303f1)
 
 
 This schematic reflects the updated design in which we moved away from the ESP32-DevKitC and opted for a more compact and solder-friendly approach. We integrated a micro-USB port for easier power access and enclosure compatibility, using an AMS1117 regulator to supply 3.3V to the system. The selected ESP32 module connects via a flexible ribbon-style interface, simplifying the connection to the camera and reducing the number of manual jumper wires required. This change improved both assembly time and reliability, enabling a cleaner and more maintainable final hardware layout.
@@ -70,7 +64,6 @@ This schematic reflects the updated design in which we moved away from the ESP32
 
 
 
-![Image](https://github.com/user-attachments/assets/e48d99e3-ae58-43f3-b8de-db75730a008a)
 
 
 
@@ -85,7 +78,6 @@ This is our revised PCB design, created after addressing the limitations of our 
 
 
 
-![Image](https://github.com/user-attachments/assets/fe4dfe38-be37-493e-9758-e150e0cb4743)
 
 
 
@@ -109,30 +101,30 @@ This image captures a crucial moment in our blink detection accuracy testing pha
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Image](https://github.com/user-attachments/assets/7df59f5a-2f9e-4cbc-b279-d5fdff1d8fcf)
+![Image](https://github.com/user-attachments/assets/92aab60a-71a7-47d5-baca-dd429f16672a)
+![Image](https://github.com/user-attachments/assets/ebc02adc-a8c7-40e1-bc63-6a367c717c03)
+![Image](https://github.com/user-attachments/assets/52a4e769-bde4-48b5-9adb-9a25cda0c260)
+![Image](https://github.com/user-attachments/assets/7899d094-d7fe-436b-8c45-7396f70a63fd)
+![Image](https://github.com/user-attachments/assets/25722ac6-1897-4e2a-8725-4f47a0f0e30c)
+![Image](https://github.com/user-attachments/assets/29859e3e-f743-435b-8288-092fccc42622)
+![Image](https://github.com/user-attachments/assets/3cbb860a-c24e-4d49-bd7d-1abdeeaba970)
+![Image](https://github.com/user-attachments/assets/daf768e6-5a36-4477-8dbf-2fa720794e39)
+![Image](https://github.com/user-attachments/assets/51840e4a-a983-4a65-8f3d-15e3e3e7e4e5)
+![Image](https://github.com/user-attachments/assets/3ab81ae4-17a2-4d75-8cf3-e65bf4c33dfd)
+![Image](https://github.com/user-attachments/assets/c927fd46-e59d-469e-868b-137d52b3afa0)
+![Image](https://github.com/user-attachments/assets/757039d1-8ddd-4604-a396-75fa81a51954)
+![Image](https://github.com/user-attachments/assets/1ae0922e-a29d-4625-89a9-8b8bfcffb6df)
+![Image](https://github.com/user-attachments/assets/9465a488-0243-4e5b-ab13-79092ea885d3)
+![Image](https://github.com/user-attachments/assets/4ef414e8-8763-4505-b519-20aebc2441b5)
+![Image](https://github.com/user-attachments/assets/3b275698-6193-4dfb-b32e-d1c7a70c97f1)
+![Image](https://github.com/user-attachments/assets/2b49ee72-c2a0-4935-856d-d71324ba2e98)
+![Image](https://github.com/user-attachments/assets/887f29db-8dbf-4bab-8bd3-f405ad52cbf6)
+![Image](https://github.com/user-attachments/assets/cd7ba463-d6e1-470f-b9d6-566a68057dc9)
+![Image](https://github.com/user-attachments/assets/94368505-a7ec-4d52-ac05-3e6ca0a52cef)
+![Image](https://github.com/user-attachments/assets/1fd543bd-041e-4747-ac75-c22af03250f8)
+![Image](https://github.com/user-attachments/assets/be4825ef-8516-406d-8e2f-a0ea16e63c9e)
+![Image](https://github.com/user-attachments/assets/32190fd6-ec97-4d6b-b764-b640a3aa234c)
 
 
 
@@ -146,18 +138,6 @@ POST Receiver
 URI Registration 
 
 The ESP32 server-side HTTP file defines and handles routes for POST-based control of hardware peripherals. In this example, the /flash endpoint is registered using httpd_uri_t, and tied to the flash_toggle_handler function. When a POST request is received, the handler parses the body to determine whether to turn the flashlight (GPIO 4) on, off, or set its brightness to a specific level using PWM. The flash_ui_handler also serves a simple HTML interface that allows manual control from any browser on the network. This implementation worked beautifully, providing low-latency feedback and making the ESP32 both network-controllable and UI-friendly.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -292,26 +272,5 @@ Final Enclsoure ready for final demo! Everything is working!
 
 
 
-Week 2 Feb 17 - 21 | Project Proposal Review + Inital Design Stage
-===================================================================
-
-After identifying the dangers of drowsy driving from personal experience, we began designing a system that could monitor a driver’s alertness in real time. To do this, we needed a mix of physical sensors and wireless communication to assess wellness and deliver feedback quickly. The flowchart we developed became the blueprint for this vision, outlining how each component—camera, sensors, display, and servers—would connect and operate together.
-At the heart of the system is the ESP32-S3, which collects sensor data and controls outputs like an OLED display, buzzer, and LED. Powered through a car’s USB port and regulated to 3.3V using an AMS1117, the ESP32 also connects to a DFRobot MQ-3 alcohol sensor and an OV2640 camera module. We initially planned to use a motion sensor (BNO055 IMU), but removed it after determining it was unnecessary.
-To handle intensive tasks like image processing, we offloaded blink and yawn detection to a Raspberry Pi 4 running Python scripts and OpenCV, hosted on a Flask web server. Every 30 seconds, the Pi calculates a fatigue score and sends it back to the ESP32 or browser interface. A smartphone hotspot serves as the local network, assigning IPs to both the Pi and ESP32 for fast, local communication.
-This system balances local device feedback with server-side intelligence, creating a responsive tool to help drivers assess their condition before it becomes dangerous, all sparked by one tired night on the road.
 
 
-### Week 3 Feb 24 - 28 | Project Vision
-This inspired the development of the Driver Fatigue System—a multi-modal platform designed to track signs of drowsiness, monitor facial fatigue cues like prolonged blinks or yawns, and even detect signs of intoxication. By combining computer vision, real-time feedback, and onboard alerts, this system aims to support drivers in staying safe, informed, and aware of their physical state while on the road.
-
-### Week 4 Mar 3 - 7 | Initial System Design
-After identifying the dangers of drowsy driving from personal experience, we began designing a system that could monitor a driver’s alertness in real time. To do this, we needed a mix of physical sensors and wireless communication to assess wellness and deliver feedback quickly. The flowchart we developed became the blueprint for this vision, outlining how each component—camera, sensors, display, and servers—would connect and operate together.
-
-### Week 5 Mar 10 - 14 | Integration Overview
-At the heart of the system is the ESP32-S3, which collects sensor data and controls outputs like an OLED display, buzzer, and LED. Powered through a car’s USB port and regulated to 3.3V using an AMS1117, the ESP32 also connects to a DFRobot MQ-3 alcohol sensor and an OV2640 camera module. We initially planned to use a motion sensor (BNO055 IMU), but removed it after determining it was unnecessary.
-
-### Week 6 Mar 17 - 21 | Server Communication Setup
-To handle intensive tasks like image processing, we offloaded blink and yawn detection to a Raspberry Pi 4 running Python scripts and OpenCV, hosted on a Flask web server. Every 30 seconds, the Pi calculates a fatigue score and sends it back to the ESP32 or browser interface. A smartphone hotspot serves as the local network, assigning IPs to both the Pi and ESP32 for fast, local communication.
-
-### Week 7 Mar 24 - 28 | System Impact
-This system balances local device feedback with server-side intelligence, creating a responsive tool to help drivers assess their condition before it becomes dangerous, all sparked by one tired night on the road.
