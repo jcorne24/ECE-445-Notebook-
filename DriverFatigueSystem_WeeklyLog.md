@@ -9,6 +9,7 @@ This inspired the development of the Driver Fatigue System—a multi-modal platf
 ![Image](https://github.com/user-attachments/assets/16e39c37-b5a6-4835-8183-b2b492563d60)
 
 
+![Image](https://github.com/user-attachments/assets/08a9641c-2d15-45d8-98ee-b6bc5ac26e5d)
 
 
 After identifying the dangers of drowsy driving from personal experience, we began designing a system that could monitor a driver’s alertness in real time. To do this, we needed a mix of physical sensors and wireless communication to assess wellness and deliver feedback quickly. The flowchart we developed became the blueprint for this vision, outlining how each component—camera, sensors, display, and servers—would connect and operate together.
@@ -16,29 +17,7 @@ At the heart of the system is the ESP32-S3, which collects sensor data and contr
 To handle intensive tasks like image processing, we offloaded blink and yawn detection to a Raspberry Pi 4 running Python scripts and OpenCV, hosted on a Flask web server. Every 30 seconds, the Pi calculates a fatigue score and sends it back to the ESP32 or browser interface. A smartphone hotspot serves as the local network, assigning IPs to both the Pi and ESP32 for fast, local communication.
 This system balances local device feedback with server-side intelligence, creating a responsive tool to help drivers assess their condition before it becomes dangerous, all sparked by one tired night on the road.
 
-LIST OF PARTS Search 
-ESP
-Raspberry Pi
-MQ3
-OV2640
-OLED Display
-Buzzer
-LED
-3.3V Regulator
-Molex 2x9 for OV2640 + wire?
-Molex 1x4 OLED + wire?
-Molex 1x4 MQ3 + wire?
-Molex 1x2 Buzzer (solder Buzzer on PCB?) + wire?
-Molex 1x2 LED 
-USB-C
-3 Resistors 1M 5.11K 5.11K
-1 uF capacitor
-
-E-SHOP
-AZ1117CD-3.3TRG1 -3.3Voltage regulator 
-AP2112K-3.3TRG1 - 3.3Voltage regulator 
-10118194-0001LF - Microusb 
-
+<img width="392" alt="Image" src="https://github.com/user-attachments/assets/d7d7afc0-b58b-4ffe-89ff-bc853396bab3" />
 
 
 
