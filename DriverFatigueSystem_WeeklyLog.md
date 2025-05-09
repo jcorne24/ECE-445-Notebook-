@@ -20,6 +20,9 @@ This system balances local device feedback with server-side intelligence, creati
 <img width="392" alt="Image" src="https://github.com/user-attachments/assets/d7d7afc0-b58b-4ffe-89ff-bc853396bab3" />
 
 
+Week 2 Feb 17 - 21 | Project Proposal Review + Inital Design Stage
+===================================================================
+
 ![Image](https://github.com/user-attachments/assets/3ce4ddd4-5eb7-42d0-ae61-9378f7b7e0e2)
 
 This schematic represents our initial hardware mockup, developed during the early planning phase of the project. At this stage, we designed around an ESP32-DEVKITC-32E and prioritized including a USB-C connector for modern power delivery and convenience. Power from the USB-C port was stepped down to 3.3V using an AMS1117 regulator to supply the microcontroller and all peripherals. Key components such as the MQ-3 alcohol sensor, OLED display, LED, and buzzer were mapped out and connected directly to available GPIO pins. This early layout gave us full control over pin assignments and served as a foundational reference for system integration.
@@ -36,6 +39,8 @@ During development, we realized the original camera configuration using Molex-st
 
 
 
+Week 3 Feb 24 - 28 | Inital Design Completed
+================================================
 
 Initial Sensor Testing 
 
@@ -73,6 +78,8 @@ This schematic reflects the updated design in which we moved away from the ESP32
 
 
 
+Week 4 Mar 3 - 7 | Teamwork Evaluation + Design Document + Inital Subsystem Implementation
+========================================================================
 
 ![Image](https://github.com/user-attachments/assets/2bb636a5-7cf8-4ba8-b623-f4cee8a42069)
 
@@ -96,6 +103,9 @@ This is our revised PCB design, created after addressing the limitations of our 
 To get I2C working on the ESP32-CAM, we had to manually assign pins since it doesn’t have dedicated I2C hardware lines. We selected GPIO 15 for SDA and GPIO 14 for SCL, then initialized a TwoWire object on bus 0. Using the Adafruit SSD1306 library with these custom-defined pins, we were able to successfully communicate with the OLED display. This setup allowed reliable screen output without interfering with the camera or WiFi, which often share key GPIOs on the ESP32-CAM.
 
 
+Week 5 Mar 10 - 14 | Breadboard Demos
+===================================================================
+
 
 ![Image](https://github.com/user-attachments/assets/e5a8b77d-b68d-4e6f-b4f6-03a9a45cf1b7)
 
@@ -105,6 +115,8 @@ A key breakthrough in our development came thanks to Vincent, who successfully i
 The code Vincent suggested for EAR detection based on landmarks
 
 
+Week 6 Mar 17 - 21 | Spring Break
+=================================================
 
 ![Image](https://github.com/user-attachments/assets/bf668777-70db-453f-a320-a6ffc568380f)
 
@@ -116,7 +128,8 @@ This image captures a crucial moment in our blink detection accuracy testing pha
 
 
 
-
+Week 7 Mar 24 - 28 | Research and Building Software
+==================================================================================
 
 Endpoint Routing ESP 32 SIDE
 
@@ -160,6 +173,8 @@ This screenshot shows the original user interface hosted on the ESP32 web server
 
 This image shows the improved and finalized version of our ESP32 server UI, optimized for mobile use. Compared to the original version, this interface features clearer button spacing, consistent alignment, and more intuitive styling for touchscreen interaction. Buttons are styled with hover effects, color cues, and padding that make each function, like starting a driving session or toggling the buzzer, easy to access on any smartphone. The layout responds well to different screen sizes and maintains readability, addressing the usability issues seen in our first prototype. This polished interface enhances the overall user experience and ties together the system’s core functions in a clean, professional presentation.
 
+Week 8 Mar 31 - Apr 4 | 3rd Round PCB order
+==================================================================================
 
 Raspberry Pi Server Versions: 
 
@@ -192,6 +207,8 @@ This JavaScript code snippet powers the dynamic front-end behavior of our Raspbe
 
 
 
+Week 9 Apr 7 - 11 | Final PCB order
+==================================================================================
 
 
 ![Image](https://github.com/user-attachments/assets/ed6b520b-8056-4276-9f8b-2693a01bb357)
@@ -205,6 +222,9 @@ This image shows our finalized prototype demo on a breadboard, featuring the ESP
 
 
 
+Week 10 Apr 14 - 18 | Continued Debugging and Research
+==================================================================================
+
 
 ![Image](https://github.com/user-attachments/assets/76e24753-f7f9-412d-a7b1-f892c993fda1)
 
@@ -216,6 +236,8 @@ This interface serves as the real-time monitoring dashboard for our driver fatig
 
 
 
+Week 11 Apr 21 - 25 | MOCK DEMO
+==================================================================================
 
 
 
@@ -236,7 +258,8 @@ This image shows one of our key testing sessions, where we evaluated communicati
 
 To support multiple peripherals, including the MQ-3 alcohol sensor, an LED indicator, an OLED display, a button interface, and the ESP32-CAM running a WiFi server and camera stream, we initially powered the system with a 5V 1A supply. However, the system exhibited instability during peak load conditions, particularly when both the WiFi module and camera were active, occasionally causing brownouts and spontaneous resets. To address this, we upgraded to a 5V 2.4A regulated source. The estimated current draw was calculated as follows:
 
-
+Week 12 Apr 28 - May 2 | DEMO WEEK
+==================================================================================
 
 
 ![Image](https://github.com/user-attachments/assets/e95765fd-96d7-4ca6-9305-65f228d4e0a5)
@@ -252,6 +275,11 @@ Final Enclosure ready for final demo! Everything is working!
 ![Image](https://github.com/user-attachments/assets/cc3eed5d-efd2-4101-85de-45a522fb4333)
 
 
+Week 13 May 5 - 9 | FINAL WEEK WRAPPING UP
+==================================================================================
+
+In this week, we made finishing touches to our Final Presentation Slides  
+Successfully presented our project to Professor, TAs, and peers 
 
 
 
