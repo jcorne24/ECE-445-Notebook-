@@ -24,40 +24,14 @@ This schematic represents our initial hardware mockup, developed during the earl
 
 ![Image](https://github.com/user-attachments/assets/fca01364-de5d-4350-bbe6-507926016b17)
 
+![Image](https://github.com/user-attachments/assets/2aff27a8-458d-4108-a202-02ca8477a037)
 
 This image shows our initial PCB layout in KiCad, where we encountered several critical design oversights. One major issue was the USB-C port footprint, which was placed away from the board edge—making it physically unusable for cable connection. At this stage, we were still relying on a Molex-style connection scheme for the camera and sensors, which added wiring complexity. We used part libraries and footprint imports from Digi-Key to populate our schematic and layout quickly, but overlooked mechanical placement and enclosure fit. Despite its flaws, this version helped us become more familiar with PCB workflow and informed our corrected final revision.
 
 
 During development, we realized the original camera configuration using Molex-style I2C connectors was not reliable or practical for repeated prototyping. This led us to explore alternative connection methods, ultimately choosing a camera strip connector similar to those used in commercial ESP32-CAM modules. The transition required sourcing a compatible connector and verifying pin alignment and signal integrity. This change greatly improved physical stability and reduced the chance of misalignment or connection failure. It also simplified integration with our PCB and reduced debugging time during testing.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Image](https://github.com/user-attachments/assets/eb088de2-1628-433e-8c9b-e123718c0ef0)
 
 
 
@@ -69,11 +43,15 @@ We successfully got the MQ3 alcohol sensor working with the ESP32-DevKitC on a b
 
 
 
+![Image](https://github.com/user-attachments/assets/e12ff9b6-defb-4be0-b0ec-d7db6e9c0125)
+
+
 
 This OV2640 camera module was ultimately unusable in our system due to missing documentation and incomplete pin functionality. Notably, it lacks an exposed XCLK (external clock) pin, which is required to drive the camera sensor with a 10–20 MHz clock signal from the ESP32. Without this input, the module cannot be initialized or stream image data properly. Additionally, there were no available datasheets or verified user reviews to validate the pinout or confirm signal compatibility, making debugging nearly impossible. As a result, we replaced it with a more standardized ESP32-CAM board that included proper XCLK routing and a proven working configuration.
 
 
 
+![Image](https://github.com/user-attachments/assets/5f131058-ee52-4e74-a20d-1d6385b303f1)
 
 
 This schematic reflects the updated design in which we moved away from the ESP32-DevKitC and opted for a more compact and solder-friendly approach. We integrated a micro-USB port for easier power access and enclosure compatibility, using an AMS1117 regulator to supply 3.3V to the system. The selected ESP32 module connects via a flexible ribbon-style interface, simplifying the connection to the camera and reducing the number of manual jumper wires required. This change improved both assembly time and reliability, enabling a cleaner and more maintainable final hardware layout.
@@ -92,7 +70,7 @@ This schematic reflects the updated design in which we moved away from the ESP32
 
 
 
-
+![Image](https://github.com/user-attachments/assets/e48d99e3-ae58-43f3-b8de-db75730a008a)
 
 
 
@@ -107,6 +85,7 @@ This is our revised PCB design, created after addressing the limitations of our 
 
 
 
+![Image](https://github.com/user-attachments/assets/fe4dfe38-be37-493e-9758-e150e0cb4743)
 
 
 
