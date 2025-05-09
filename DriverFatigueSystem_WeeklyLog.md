@@ -1,5 +1,6 @@
 # Driver Fatigue System - Weekly Progress Log
-
+Week 1 Feb 10 - 14 | General Research and Proposal Writing
+=========================================================
 Week 1 Feb 10 - 14 | General Research and Proposal Writing
 Sleep-deprived driving is an underappreciated but dangerously common problem. On a recent drive back home from Illinois in my Mustang GT, I experienced firsthand just how severe fatigue behind the wheel can become. Despite having lane assist and blasting music with caffeine in hand, I caught myself swerving repeatedly—my eyelids growing heavier, my focus slipping. There were stretches of road where my eyes were closed for what felt like forever, and I realized I was becoming a serious danger to myself and everyone around me. Rest stops felt untrustworthy, and I had no meaningful way to assess whether I was safe to continue driving.
 This experience exposed a real and urgent gap in driver wellness awareness, especially when driving alone for long distances. What I truly needed wasn’t more coffee or loud music; I needed an objective, real-time system that could monitor my condition and help me make smarter decisions before it was too late.
