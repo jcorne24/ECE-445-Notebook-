@@ -19,6 +19,7 @@ This system balances local device feedback with server-side intelligence, creati
 
 <img width="392" alt="Image" src="https://github.com/user-attachments/assets/d7d7afc0-b58b-4ffe-89ff-bc853396bab3" />
 
+We begin to seek out parts from the ECE building and using our project funds to outsource on Amazon the items unavailable to us in the building. 
 
 Week 2 Feb 17 - 21 | Project Proposal Review + Inital Design Stage
 ===================================================================
@@ -39,7 +40,7 @@ During development, we realized the original camera configuration using Molex-st
 
 
 
-Week 3 Feb 24 - 28 | Inital Design Completed
+Week 3 Feb 24 - 28 | Initial Design Completed
 ================================================
 
 Initial Sensor Testing 
