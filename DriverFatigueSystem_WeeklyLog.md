@@ -18,26 +18,11 @@ To handle intensive tasks like image processing, we offloaded blink and yawn det
 This system balances local device feedback with server-side intelligence, creating a responsive tool to help drivers assess their condition before it becomes dangerous, all sparked by one tired night on the road.
 
 <img width="392" alt="Image" src="https://github.com/user-attachments/assets/d7d7afc0-b58b-4ffe-89ff-bc853396bab3" />
-
-
-
-
-
-
-
-
-
-
+![Image](https://github.com/user-attachments/assets/d19617cb-059f-404d-b60d-db308a863a12)
 
 This schematic represents our initial hardware mockup, developed during the early planning phase of the project. At this stage, we designed around an ESP32-DEVKITC-32E and prioritized including a USB-C connector for modern power delivery and convenience. Power from the USB-C port was stepped down to 3.3V using an AMS1117 regulator to supply the microcontroller and all peripherals. Key components such as the MQ-3 alcohol sensor, OLED display, LED, and buzzer were mapped out and connected directly to available GPIO pins. This early layout gave us full control over pin assignments and served as a foundational reference for system integration.
 
-
-
-
-
-
-
-
+![Image](https://github.com/user-attachments/assets/fca01364-de5d-4350-bbe6-507926016b17)
 
 
 This image shows our initial PCB layout in KiCad, where we encountered several critical design oversights. One major issue was the USB-C port footprint, which was placed away from the board edge—making it physically unusable for cable connection. At this stage, we were still relying on a Molex-style connection scheme for the camera and sensors, which added wiring complexity. We used part libraries and footprint imports from Digi-Key to populate our schematic and layout quickly, but overlooked mechanical placement and enclosure fit. Despite its flaws, this version helped us become more familiar with PCB workflow and informed our corrected final revision.
